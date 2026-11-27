@@ -30,7 +30,6 @@ function updateMachineStatus(req, res) {
       .json({ error: `Machine with id '${req.params.id}' not found` });
   }
 
-  // req.body can be undefined if no JSON body was sent
   const status = req.body ? req.body.status : undefined;
 
   if (status === undefined || status === null || status === "") {

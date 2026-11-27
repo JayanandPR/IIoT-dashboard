@@ -6,8 +6,8 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors()); // allow the React app (different port) to call this API
-app.use(express.json()); // parse JSON request bodies into req.body
+app.use(cors());
+app.use(express.json());
 
 // Routes
 app.use("/api/machines", machineRoutes);
